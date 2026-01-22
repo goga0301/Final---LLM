@@ -129,37 +129,51 @@ XAI_API_KEY=your_xai_api_key
 
 ## 📊 Usage
 
-### Run Full Pipeline
+All commands are run from the project root. If no action flag is given, `--full` is used by default.
+
+### Run Modes
+
+| Command | Description |
+|---------|-------------|
+| `python main.py --full` | Run the complete pipeline: debate → baselines → evaluation → plots |
+| `python main.py --run-debate` | Run the multi-LLM debate system on all problems only |
+| `python main.py --run-baselines` | Run baseline comparisons (single-LLM + voting) only |
+| `python main.py --evaluate` | Compute evaluation metrics from existing debate/baseline results |
+| `python main.py --generate-plots` | Generate visualization plots from existing results |
+| `python main.py --check-keys` | Print API key status for each provider (no API calls) |
+
+### Combined / Optional Flags
+
 ```bash
-python main.py --full
+# Limit number of problems (e.g. for quick tests)
+python main.py --full --limit 5
+python main.py --run-debate --limit 3
+
+# Use a custom problems file
+python main.py --full --problems-file path/to/problems.json
+python main.py --run-debate --problems-file data/my_problems.json
+
+# Check keys and test API connectivity with a custom message
+python main.py --check-keys --test-message "Hello" --temperature 0.7
 ```
-This runs the complete pipeline: debate system, baselines, evaluation, and visualization.
 
-### Run Individual Components
+### Example Sequences
+
 ```bash
-# Run debate system only
+# Full run (default when no flags are passed)
+python main.py
+python main.py --full
+
+# Debate only, then later evaluate and plot
 python main.py --run-debate
-
-# Run baseline comparisons
-python main.py --run-baselines
-
-# Evaluate existing results
 python main.py --evaluate
-
-# Generate plots from existing results
 python main.py --generate-plots
 
-# Check API key configuration
-python main.py --check-keys
-```
+# Baselines only
+python main.py --run-baselines
 
-### Additional Options
-```bash
-# Limit number of problems (useful for testing)
-python main.py --full --limit 5
-
-# Use custom problems file
-python main.py --full --problems-file path/to/problems.json
+# Re-evaluate and re-plot without re-running debate/baselines
+python main.py --evaluate --generate-plots
 ```
 
 ## 📈 Evaluation Metrics

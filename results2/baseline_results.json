@@ -1,0 +1,794 @@
+{
+  "single_llm": {
+    "gpt4": {
+      "correct": 6,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "10",
+          "correct": true
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "9/4",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "43",
+          "correct": true
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "220",
+          "correct": false
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "\\(\\frac{1}{8}\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "15",
+          "correct": false
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "153",
+          "correct": true
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "\\(\\displaystyle \\theta_{\\min} = \\arctan\\!\\bigl(\\tfrac{1}{2\\mu}\\bigr)\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "15 m",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "\\(\\displaystyle v = \\sqrt{3gL}\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "\\[",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "\\(t = \\sqrt{\\dfrac{R}{2}}\\) seconds",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "Approximately \\(56^\\circ\\text{C}\\).",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "A is the spy, B is the knave, and C is the knight.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "The German owns the fish.",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "99",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "Yes, it is possible. By systematically choosing which coins to place on each side of the balance for three specific weighings (as outlined above), you can always determine exactly which one of the 12 coins is counterfeit and whether it is heavier or lighter.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "A is a knight, B is a knave, and C is a knave.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "They use common knowledge and the pattern of silence across rounds. Each philosopher initially sees two dirty foreheads and considers the possibility that they themselves might be clean. If one were clean, then only two would be dirty, and those two would have been able to deduce their status and raise their hands by the second round (using the standard two-person version of the puzzle). When no one raises a hand in the second round, each realizes that this “I am clean” assumption leads to a contradiction. Hence each concludes they must also be dirty, and all three raise their hands in the third round.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "Bid your true valuation: $100.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "Backward induction predicts that the first player will take immediately on the first move, ending the game with payoffs (1, 0).",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "Both firms advertise; the Nash equilibrium is (Advertise, Advertise) with payoffs (3M, 3M).",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "The first player is in a winning position. An optimal first move is to remove 1 object from the pile of 7, leaving piles of 3, 5, and 6.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "Each player randomizes uniformly: Player 1 plays Heads with probability 1/2 and Tails with probability 1/2, and Player 2 plays Heads with probability 1/2 and Tails with probability 1/2. This mixed strategy profile is the unique Nash equilibrium, yielding expected payoff 0 to both players.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "1",
+          "correct": true
+        }
+      ],
+      "accuracy": 0.24
+    },
+    "claude": {
+      "correct": 0,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "7 players",
+          "correct": false
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "The expected number of draws until a blue ball is drawn is 8/3.",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "41",
+          "correct": false
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "45",
+          "correct": false
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "The probability of the sum of three fair six-sided dice being 10 is 3/216 = 1/72.",
+          "correct": false
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "There are 18 two-digit lucky numbers.",
+          "correct": false
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "34",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "The minimum angle θ at which the ladder will not slip is:",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "The two balls meet at a height of 20 m.",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "The speed of the free end of the rod when it becomes vertical is √(19.6 × L), where L is the length of the rod.",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "The period of oscillation for the given system is:",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "t = √((2√2 - 4) * R^2 / (2 m/s²)^2)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "The temperature of the coffee after another 5 minutes will be approximately 55°C.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "A is a knight, B is a spy, and C is a knave.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "The Bluemaster smoker owns the fish.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "100 prisoners can be guaranteed to guess their hat color correctly.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "Using the balance scale exactly 3 times, we can determine which coin is counterfeit and whether it is heavier or lighter.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "A is a knave, B is a knight, and C is a knave.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "The three philosophers deduced that their foreheads were dirty because:",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "The optimal bidding strategy in a second-price sealed-bid auction (Vickrey auction) is to bid your true valuation of the item, which in this case is $100.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "Backward induction predicts that the optimal strategy for both players is to 'take' the pot at every turn, resulting in the first player taking the initial $1 pot.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "The Nash equilibrium is for both companies to advertise (A, A), where each company earns $3M.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "The first player is in a winning position, and the optimal first move is to remove 3 objects from the pile with 7 objects, leaving the piles with 0, 5, and 4 objects, respectively.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "The Nash equilibrium for the game of matching pennies is a mixed strategy where both Player 1 and Player 2 choose Heads or Tails with equal probability (50% each).",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "67",
+          "correct": false
+        }
+      ],
+      "accuracy": 0.0
+    },
+    "gemini": {
+      "correct": 4,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "10",
+          "correct": true
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "ERROR: 'NoneType' object has no attribute 'lower'",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "43",
+          "correct": true
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "Wait, $n=2$ is $\\binom{2}{2}=1$, $n=3$ is $\\binom{3}{2}=3$, $n=4$ is $\\binom{4}{2}=6$, ..., $n=11$ is $\\binom{11}{2}=55",
+          "correct": false
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "- (2, 3,",
+          "correct": false
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "- $S=1$: $",
+          "correct": false
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "1",
+          "correct": true
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "*   **Vertical equilibrium ($\\sum F_y = 0$):**",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "15 m",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "\\sqrt{3gL}",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "2\\pi \\sqrt{\\frac{2m}{k}}",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "$v = v_0 + a_t t = 0 + 2t =",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "ERROR: 'NoneType' object has no attribute 'lower'",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "ERROR: 'NoneType' object has no attribute 'lower'",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "ERROR: 'NoneType' object has no attribute 'lower'",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "While the 100th prisoner has only a 50% chance of being correct, their guess provides the parity of the remaining 99 hats to everyone else. The 99th prisoner can then see the 9",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "*   **Second Weighing:** Weigh coins (9, 10) against (1, 11). (",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "If A and B are both",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "The philosophers deduce their foreheads are dirty through the process of elimination based on the silence of the others. The silence in Round 1 proves there is more than one dirty forehead. The silence in Round 2 proves there are more than two dirty foreheads. Since there are only three philosophers, and each sees two dirty foreheads, the continued silence until Round 3 confirms to each individual that they must be the third person with a dirty forehead.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "Bid exactly $100",
+          "correct": false
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "2. **Turn 5: Player 1's turn.** The pot is $16. If Player",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "ERROR: 'NoneType' object has no attribute 'lower'",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "- For the third pile: $7 \\",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "*   (Tails, Heads): P1 loses $1, P2 wins $1 (Payoff: -",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "*   \"Three players simultaneously choose a number from",
+          "correct": false
+        }
+      ],
+      "accuracy": 0.16
+    },
+    "grok": {
+      "correct": 9,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "10",
+          "correct": true
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "9/4",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "43",
+          "correct": true
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "219",
+          "correct": true
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "\\(\\dfrac{1}{8}\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "23",
+          "correct": true
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "153",
+          "correct": true
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "\\theta = \\arctan\\left(\\frac{1}{2\\mu}\\right)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "15 meters",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "sqrt(3 g L)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "T = 2π √(2m / k)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "\\(\\dfrac{\\sqrt{2R}}{2}\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "55.7°C",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "A is a knight, B is a spy, C is a knave",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "The German",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "99",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "By following the step-by-step weighing process outlined above, you can determine the counterfeit coin and whether it is heavier or lighter.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "A is a knight, B is a knave, and C is a knave.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "The philosophers deduce their foreheads are dirty by observing that no one raises their hand in the first two rounds, which contradicts the scenarios where fewer than three have dirty foreheads, leading each to conclude in the third round that they must have a dirty forehead as well.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "Bid your true valuation of $100.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "Player 1 takes the pot on the first turn.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "The Nash equilibrium is for both companies to advertise.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "The first player is in a winning position. The optimal first moves are to remove 1 object from the pile of 3 (leaving piles: 2, 5, 7), remove 1 object from the pile of 5 (leaving piles: 3, 4, 7), or remove 1 object from the pile of 7 (leaving piles: 3, 5, 6).",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "The Nash equilibrium is for both players to play Heads with probability 1/2 and Tails with probability 1/2.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "1",
+          "correct": true
+        }
+      ],
+      "accuracy": 0.36
+    }
+  },
+  "voting": {
+    "correct": 6,
+    "total": 25,
+    "answers": [
+      {
+        "problem_id": "math_001",
+        "individual_answers": [
+          "10",
+          "10 players participated in the tournament.",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "10",
+        "correct": true
+      },
+      {
+        "problem_id": "math_002",
+        "individual_answers": [
+          "\\(\\displaystyle \\frac{99}{40}\\)",
+          "REASONING: The expected number of draws until a blue ball is drawn is 8/3.",
+          "*   E[X] = E[R"
+        ],
+        "majority_answer": "\\(\\displaystyle \\frac{99}{40}\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "math_003",
+        "individual_answers": [
+          "43",
+          "49",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "43",
+        "correct": true
+      },
+      {
+        "problem_id": "math_004",
+        "individual_answers": [
+          "220",
+          "120",
+          "For $x_2, x_3, x_4$, they can range from 0"
+        ],
+        "majority_answer": "220",
+        "correct": false
+      },
+      {
+        "problem_id": "math_005",
+        "individual_answers": [
+          "\\(\\frac{1}{8}\\)",
+          "The probability of rolling three fair six-sided dice and getting a sum of 10 is 3/216 or 1/72.",
+          "2.  **Favorable Outcomes (Sum = 10):** We need to find all combinations of three integers $(x_1, x_2, x_3)$ such that $1 \\le x_i \\le 6$ and $x_1 + x_2 + x_3 = 10$."
+        ],
+        "majority_answer": "\\(\\frac{1}{8}\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "math_006",
+        "individual_answers": [
+          "24",
+          "There are 9 two-digit lucky numbers.",
+          "*   Let's check $S=1$ again. $a+b=1$. Condition $1 | 9a$. Always true."
+        ],
+        "majority_answer": "24",
+        "correct": false
+      },
+      {
+        "problem_id": "math_007",
+        "individual_answers": [
+          "153",
+          "The number of ways to tile a 3 × 8 rectangle with 2 × 1 dominoes is 55.",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "153",
+        "correct": true
+      },
+      {
+        "problem_id": "physics_001",
+        "individual_answers": [
+          "\\(\\displaystyle \\theta_{\\min} = \\arctan\\left(\\frac{1}{2\\mu}\\right)\\)",
+          "The minimum angle θ (in terms of μ) at which the ladder will not slip is:",
+          "Torque from $N_w$: At $(0, L \\sin\\theta)$. Force $N_w$ is in $+x$ direction. Lever arm is $L \\sin\\theta$. Torque is $N_"
+        ],
+        "majority_answer": "\\(\\displaystyle \\theta_{\\min} = \\arctan\\left(\\frac{1}{2\\mu}\\right)\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_002",
+        "individual_answers": [
+          "15 m above the ground",
+          "The two balls meet at a height of 0 m, or at ground level.",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "15 m above the ground",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_003",
+        "individual_answers": [
+          "\\(\\displaystyle v = \\sqrt{3gL}\\)",
+          "The speed of the free end of the rod when it becomes vertical is sqrt(g * L), where g is the acceleration due to gravity and L is the length of the rod.",
+          "\\sqrt{3gL}"
+        ],
+        "majority_answer": "\\(\\displaystyle v = \\sqrt{3gL}\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_004",
+        "individual_answers": [
+          "\\[",
+          "The period of oscillation for the system is:",
+          "T = 2\\pi \\sqrt{\\frac{2m}{k}}"
+        ],
+        "majority_answer": "\\[",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_005",
+        "individual_answers": [
+          "\\(\\displaystyle t = \\sqrt{\\frac{R}{2}} \\,\\text{s}\\)",
+          "The time when the magnitude of the total acceleration is equal to 2√2 m/s² is t = √(2R)/2 s.",
+          "*   Let's think. If the question is from a source where $R$ is usually 1, then $t = \\sqrt{"
+        ],
+        "majority_answer": "\\(\\displaystyle t = \\sqrt{\\frac{R}{2}} \\,\\text{s}\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_006",
+        "individual_answers": [
+          "Approximately \\(56^\\circ\\text{C}\\).",
+          "The temperature of the coffee after another 5 minutes (10 minutes in total) will be 45°C.",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "Approximately \\(56^\\circ\\text{C}\\).",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_001",
+        "individual_answers": [
+          "A is the spy, B is the knave, and C is the knight.",
+          "Based on the given information and the analysis, the only possible solution is:",
+          "*   If A is the knight and B is the spy, then"
+        ],
+        "majority_answer": "A is the spy, B is the knave, and C is the knight.",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_002",
+        "individual_answers": [
+          "The German owns the fish.",
+          "The fish owner is the Dane, who lives in the third house and drinks tea (given 3).",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "The German owns the fish.",
+        "correct": true
+      },
+      {
+        "problem_id": "logic_003",
+        "individual_answers": [
+          "99",
+          "50 prisoners can be guaranteed to guess their hat color correctly.",
+          "The second prisoner to guess (the 99th in line) can see the 98 hats in front of"
+        ],
+        "majority_answer": "99",
+        "correct": true
+      },
+      {
+        "problem_id": "logic_004",
+        "individual_answers": [
+          "Use this strategy:",
+          "By following the steps outlined above, you can determine which coin is the counterfeit and whether it is heavier or lighter using the balance scale exactly 3 times.",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "Use this strategy:",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_005",
+        "individual_answers": [
+          "A is a knight, B is a knave, and C is a knave.",
+          "A is a knave, B is a knight, and C is a knave.",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "A is a knight, B is a knave, and C is a knave.",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_006",
+        "individual_answers": [
+          "They reason about what would have happened in worlds with fewer dirty foreheads. If there were only one dirty person, that person would see two clean foreheads and raise their hand in Round 1. No one does, so each rules out “exactly one dirty.” If there were exactly two dirty people, each dirty one would see one dirty and one clean, realize that the other would have raised their hand in Round 1 if they were the only dirty person, and therefore both would raise their hands in Round 2. When no one raises a hand in Round 2, each of the three concludes that there cannot be exactly two dirty people; therefore they themselves must also be dirty. Thus in Round 3 all three now know their foreheads are dirty and raise their hands.",
+          "The three philosophers deduce that their foreheads are dirty because:",
+          "They deduce their foreheads are dirty because the silence in the first two rounds eliminates the possibilities that only one or only two of them have dirty foreheads. Since no one raised their hand in Round 1, there must be at least two dirty foreheads; since no one raised their hand in Round 2, there must be at least three. Seeing two dirty foreheads on the others, each philosopher realizes they must be the third dirty one."
+        ],
+        "majority_answer": "They reason about what would have happened in worlds with fewer dirty foreheads. If there were only one dirty person, that person would see two clean foreheads and raise their hand in Round 1. No one does, so each rules out “exactly one dirty.” If there were exactly two dirty people, each dirty one would see one dirty and one clean, realize that the other would have raised their hand in Round 1 if they were the only dirty person, and therefore both would raise their hands in Round 2. When no one raises a hand in Round 2, each of the three concludes that there cannot be exactly two dirty people; therefore they themselves must also be dirty. Thus in Round 3 all three now know their foreheads are dirty and raise their hands.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_001",
+        "individual_answers": [
+          "Bid exactly $100.",
+          "In a second-price sealed-bid auction, where your valuation of the item is $100, the optimal bidding strategy is to bid $100.",
+          "Bid exactly your valuation ($100$)."
+        ],
+        "majority_answer": "Bid exactly $100.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_002",
+        "individual_answers": [
+          "Backward induction predicts that Player A takes the pot on the very first turn, ending the game immediately with A getting $1 and B getting $0.",
+          "The backward induction prediction is that the players will take turns 'passing' until the 6th turn, at which point the player whose turn it is will 'take' the final pot of $64.",
+          "ERROR: 'NoneType' object has no attribute 'lower'"
+        ],
+        "majority_answer": "Backward induction predicts that Player A takes the pot on the very first turn, ending the game immediately with A getting $1 and B getting $0.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_003",
+        "individual_answers": [
+          "Both firms advertise; the unique Nash equilibrium is (Advertise, Advertise).",
+          "The Nash equilibria in this game are:",
+          "- If Company B chooses to advertise, Company A earns $"
+        ],
+        "majority_answer": "Both firms advertise; the unique Nash equilibrium is (Advertise, Advertise).",
+        "correct": false
+      },
+      {
+        "problem_id": "game_004",
+        "individual_answers": [
+          "The first player is in a winning position. An optimal first move is to remove 1 object from any one pile, for instance changing the piles from (3, 5, 7) to (2, 5, 7).",
+          "The first player is in a losing position, and the optimal first move is to take 2 objects from the pile with 7 objects, leaving 5 objects in that pile.",
+          "- 110 ⊕ 111 = 001"
+        ],
+        "majority_answer": "The first player is in a winning position. An optimal first move is to remove 1 object from any one pile, for instance changing the piles from (3, 5, 7) to (2, 5, 7).",
+        "correct": false
+      },
+      {
+        "problem_id": "game_005",
+        "individual_answers": [
+          "Each player plays Heads with probability 1/2 and Tails with probability 1/2. This 50–50 mixed strategy profile is the unique Nash equilibrium.",
+          "The Nash equilibrium in the game of matching pennies is for both players to choose Heads or Tails with equal probability (0.5).",
+          "Both players choose Heads with probability 0.5 and Tails with probability 0.5."
+        ],
+        "majority_answer": "Each player plays Heads with probability 1/2 and Tails with probability 1/2. This 50–50 mixed strategy profile is the unique Nash equilibrium.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_006",
+        "individual_answers": [
+          "1",
+          "66.67",
+          "1. The maximum possible average of three numbers from 1 to 100 is 100. Therefore, the maximum possible target (2/3 of the average) is 2/3 * 100 ≈ 66.67. Any choice greater than 66.67 is irrational because it is guaranteed to be further from the target than 66.67"
+        ],
+        "majority_answer": "1",
+        "correct": true
+      }
+    ],
+    "voters": [
+      "gpt4",
+      "claude",
+      "gemini"
+    ],
+    "accuracy": 0.24
+  }
+}

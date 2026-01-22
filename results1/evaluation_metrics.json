@@ -1,0 +1,48 @@
+{
+  "total_problems": 5,
+  "overall_accuracy": 0.6,
+  "improvement_rate": 0.4,
+  "consensus_rate": 0.4,
+  "judge_accuracy": 0.6666666666666666,
+  "category_metrics": [
+    {
+      "category": "mathematical_logical",
+      "total_problems": 5,
+      "correct_count": 3,
+      "accuracy": 0.6
+    }
+  ],
+  "model_performances": [
+    {
+      "model_name": "gpt4",
+      "times_as_solver": 2,
+      "times_as_judge": 3,
+      "solver_accuracy": 1.0,
+      "solutions_selected_by_judge": 2
+    },
+    {
+      "model_name": "grok",
+      "times_as_solver": 5,
+      "times_as_judge": 0,
+      "solver_accuracy": 0.6,
+      "solutions_selected_by_judge": 2
+    },
+    {
+      "model_name": "claude",
+      "times_as_solver": 5,
+      "times_as_judge": 0,
+      "solver_accuracy": 0.4,
+      "solutions_selected_by_judge": 0
+    },
+    {
+      "model_name": "gemini",
+      "times_as_solver": 3,
+      "times_as_judge": 2,
+      "solver_accuracy": 0.3333333333333333,
+      "solutions_selected_by_judge": 1
+    }
+  ],
+  "single_llm_accuracy": {},
+  "voting_baseline_accuracy": 0.0,
+  "system_vs_best_single": 0.6
+}

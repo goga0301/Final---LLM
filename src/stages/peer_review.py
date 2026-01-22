@@ -26,6 +26,10 @@ Be constructive but rigorous:
 3. Suggest concrete improvements
 4. Assess whether you agree with the final answer
 5. If you disagree, provide your alternative answer
+6. CRITICALLY CHECK each calculation step-by-step
+7. Verify arithmetic operations independently
+8. If you find a calculation error, provide the CORRECT calculation
+9. Be especially critical of final numerical answers - verify them independently
 
 Your review will help the solver improve their solution."""
 
@@ -39,6 +43,13 @@ CATEGORY: {category}
 SOLUTION TO REVIEW:
 {solution_text}
 
+CRITICAL REVIEW REQUIREMENTS:
+1. CRITICALLY CHECK each calculation step-by-step - verify arithmetic operations independently
+2. If you find a calculation error, provide the CORRECT calculation in your error description
+3. Be especially critical of final numerical answers - verify them independently by re-solving or checking
+4. Check that all formulas are applied correctly
+5. Verify that the answer format matches what the problem asks for
+
 Provide your review in the following JSON format:
 {{
     "reviewer_id": "{reviewer_id}",
@@ -51,18 +62,18 @@ Provide your review in the following JSON format:
             {{
                 "location": "Where the error occurs (e.g., 'Step 3')",
                 "error_type": "Type (logical_error, calculation_error, assumption_error, etc.)",
-                "description": "What the error is",
+                "description": "What the error is. If it's a calculation error, provide the CORRECT calculation here.",
                 "severity": "minor|moderate|critical"
             }}
         ],
-        "suggested_changes": ["List of recommended improvements"]
+        "suggested_changes": ["List of recommended improvements. For calculation errors, include the correct calculation."]
     }},
     "overall_assessment": "excellent|good|promising_but_flawed|needs_major_revision|fundamentally_wrong",
     "agreement_with_answer": true or false,
-    "alternative_answer": "Your answer if you disagree (null if you agree)"
+    "alternative_answer": "Your answer if you disagree (null if you agree). If numeric, provide ONLY the number."
 }}
 
-Be thorough and specific in your critique.
+Be thorough and specific in your critique. Verify calculations independently.
 Respond with ONLY the JSON object."""
 
     def __init__(self, clients: Dict[str, BaseLLMClient]):

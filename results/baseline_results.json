@@ -1,0 +1,794 @@
+{
+  "single_llm": {
+    "gpt4": {
+      "correct": 7,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "10",
+          "correct": true
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "2.25",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "43",
+          "correct": true
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "220",
+          "correct": false
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "1/8",
+          "correct": true
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "23",
+          "correct": true
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "8733",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "**",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "15 meters",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "**",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "\\(\\boxed{T = 2\\pi \\sqrt{\\frac{2m}{k}}}\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "**",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "** Approximately **55.7°C** after another 5 minutes.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "A is the knight, B is the spy, C is the knave.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "THE OWNER OF THE GREEN HOUSE (HOUSE 4).**",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "99",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "Use the following strategy:",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "A is a knight, B is a knave, C is a knave.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "The philosophers deduce their foreheads are dirty through iterative reasoning based on the silence in each round. After the first round, they realize not all are clean. The second round's continued silence indicates that there isn't only one dirty forehead. Therefore, by the third round, they all conclude that everyone’s forehead is dirty, since no one has identified themselves as clean earlier, and the pattern of silence confirms the presence of all three dirty foreheads.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "$100",
+          "correct": true
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "The backward induction predicts that the first player will 'take' immediately at their first turn, ending the game with \\$1 and denying the other player any payoff.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "Both companies advertising (Advertise, Advertise).",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "The first player is in a winning position. The optimal first move is to reduce the pile of 7 objects to 6 objects.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "**",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "1",
+          "correct": true
+        }
+      ],
+      "accuracy": 0.28
+    },
+    "claude": {
+      "correct": 8,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "10 players",
+          "correct": true
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "9/4 or 2.25",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "43",
+          "correct": true
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "219",
+          "correct": true
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "1/8 (or 0.125 or 12.5%)",
+          "correct": false
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "23",
+          "correct": true
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "153",
+          "correct": true
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "$$\\theta_{min} = \\arctan\\left(\\frac{1}{2\\mu}\\right)$$",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "The balls meet at a height of **15 meters** above the ground.",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "The speed of the free end when the rod becomes vertical is:",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "T = 2π√(2m/k) or equivalently T = 2π√2 · √(m/k)",
+          "correct": true
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "**t = 1 second** (assuming R = 2 m, which gives the consistent solution)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "The temperature after another 5 minutes (at t = 10 minutes total) will be approximately **55.7°C** or **56°C** (rounded to the nearest degree).",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "**A is a spy, B is a knave, and C is a knight.**",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "1) Brit in red house",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "99",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "The solution requires a systematic three-weighing strategy:",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "A is a knight, B is a knave, and C is a knave.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "Each philosopher deduces their forehead is dirty through the following logic:",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "The optimal bidding strategy is to **bid $100 (your true valuation)**.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "**",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "The Nash equilibrium is **(Both Advertise, Both Advertise)**, where each company earns $3M. This is the only Nash equilibrium in this game, despite it being Pareto-inferior to the outcome where neither advertises.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "The first player is in a **winning position**.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "The Nash equilibrium is a **mixed strategy equilibrium** where:",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "1",
+          "correct": true
+        }
+      ],
+      "accuracy": 0.32
+    },
+    "gemini": {
+      "correct": 3,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "10",
+          "correct": true
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "Let $X$ be the number of draws",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "43",
+          "correct": true
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "No digit can be $\\ge 10$. So, 45 solutions.",
+          "correct": false
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "4.  If $X_1 =",
+          "correct": false
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "Example:",
+          "correct": false
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "This",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "[Your answer]",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "15 m",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "The final answer is $\\boxed{\\sqrt{3gL}}$.",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "$2\\pi \\sqrt{\\frac{2m}{k}}$",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "The",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "Final decision: Provide the decimal",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "Possibility 2: C is the kn",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "House | Nationality",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "99",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "**Case 1: The scale balances ({1, 2, 3, 4} = {5,",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "$S_A$: \"B is",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "The philosophers deduce their foreheads are dirty through a process of elimination and logical deduction over three rounds.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "The optimal bidding strategy is to bid your true valuation. Therefore, you should bid $100.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "Start: Pot $1. P1's turn.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "The Nash equilibrium is when both companies advertise.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "The first player is in a winning position. An optimal first move is to remove 1 object from the pile of 3, leaving piles of sizes 2, 5, and 7.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "- If Player 1 chooses T1 and Player 2 chooses H2: Player 1 gets -1, Player 2 gets 1. Player 1 can improve by switching to H1 (getting 1 instead",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "We need $7x-4 > 3$, which means",
+          "correct": false
+        }
+      ],
+      "accuracy": 0.12
+    },
+    "grok": {
+      "correct": 9,
+      "total": 25,
+      "answers": [
+        {
+          "problem_id": "math_001",
+          "answer": "10",
+          "correct": true
+        },
+        {
+          "problem_id": "math_002",
+          "answer": "9/4",
+          "correct": false
+        },
+        {
+          "problem_id": "math_003",
+          "answer": "43",
+          "correct": true
+        },
+        {
+          "problem_id": "math_004",
+          "answer": "219",
+          "correct": true
+        },
+        {
+          "problem_id": "math_005",
+          "answer": "\\(\\frac{1}{8}\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "math_006",
+          "answer": "23",
+          "correct": true
+        },
+        {
+          "problem_id": "math_007",
+          "answer": "153",
+          "correct": true
+        },
+        {
+          "problem_id": "physics_001",
+          "answer": "$\\theta = \\tan^{-1} \\left( \\frac{1}{2\\mu} \\right)$",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_002",
+          "answer": "15 m",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_003",
+          "answer": "√(3gL)",
+          "correct": true
+        },
+        {
+          "problem_id": "physics_004",
+          "answer": "\\( T = 2\\pi \\sqrt{\\dfrac{2m}{k}} \\)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_005",
+          "answer": "\\(\\sqrt{\\frac{R}{2}}\\)",
+          "correct": false
+        },
+        {
+          "problem_id": "physics_006",
+          "answer": "\\( \\frac{390}{7}^\\circ \\text{C} \\) (or approximately 55.7°C)",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_001",
+          "answer": "Two possibilities: (1) A knight, B spy, C knave; or (2) A spy, B knave, C knight.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_002",
+          "answer": "German",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_003",
+          "answer": "99",
+          "correct": true
+        },
+        {
+          "problem_id": "logic_004",
+          "answer": "Use the adaptive weighing strategy described above to identify the counterfeit coin and whether it is heavier or lighter in exactly 3 weighings.",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_005",
+          "answer": "The types are not uniquely determined. Possible assignments:",
+          "correct": false
+        },
+        {
+          "problem_id": "logic_006",
+          "answer": "All three deduce their foreheads are dirty in round 3 because no one raised hands in rounds 1 or 2, eliminating the possibilities of 1 or 2 dirty foreheads.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_001",
+          "answer": "Bid your true valuation of $100.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_002",
+          "answer": "Player 1 takes immediately on the first turn (pot $1), so payoffs are $1 for Player 1 and $0 for Player 2.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_003",
+          "answer": "Both companies advertise.",
+          "correct": false
+        },
+        {
+          "problem_id": "game_004",
+          "answer": "The first player is in a winning position. An optimal first move is to remove 1 object from the pile of 3 (leaving 2, 5, 7).",
+          "correct": false
+        },
+        {
+          "problem_id": "game_005",
+          "answer": "Both players play Heads with probability 1/2 (and Tails with probability 1/2).",
+          "correct": false
+        },
+        {
+          "problem_id": "game_006",
+          "answer": "1",
+          "correct": true
+        }
+      ],
+      "accuracy": 0.36
+    }
+  },
+  "voting": {
+    "correct": 8,
+    "total": 25,
+    "answers": [
+      {
+        "problem_id": "math_001",
+        "individual_answers": [
+          "10",
+          "10 players participated in the tournament.",
+          "The number of players is $n$. The number of games played is given by the combination formula $\\binom{n}{2}$, which is $\\frac{n(n-1)}{2}$."
+        ],
+        "majority_answer": "10",
+        "correct": true
+      },
+      {
+        "problem_id": "math_002",
+        "individual_answers": [
+          "4.5",
+          "9/4 or 2.25",
+          "This means we choose $"
+        ],
+        "majority_answer": "4.5",
+        "correct": false
+      },
+      {
+        "problem_id": "math_003",
+        "individual_answers": [
+          "43",
+          "43",
+          "To calculate $7^{23} \\pmod{100}$, we can"
+        ],
+        "majority_answer": "43",
+        "correct": true
+      },
+      {
+        "problem_id": "math_004",
+        "individual_answers": [
+          "220",
+          "219",
+          "Exclude cases where $d_1 = 0$. If $d_1=0$, then $d_2+d_3+d_4 ="
+        ],
+        "majority_answer": "220",
+        "correct": false
+      },
+      {
+        "problem_id": "math_005",
+        "individual_answers": [
+          "\\(\\boxed{\\frac{5}{36}}\\)",
+          "1/8 or 0.125 or 12.5%",
+          "Partition (6,3,1): Permutations are (6,3,1), (6,1,3), (3,6,1), (3,1,"
+        ],
+        "majority_answer": "\\(\\boxed{\\frac{5}{36}}\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "math_006",
+        "individual_answers": [
+          "23",
+          "23",
+          "30, 36"
+        ],
+        "majority_answer": "23",
+        "correct": true
+      },
+      {
+        "problem_id": "math_007",
+        "individual_answers": [
+          "153",
+          "**153**",
+          "- From $b_{n-1}$: we"
+        ],
+        "majority_answer": "153",
+        "correct": true
+      },
+      {
+        "problem_id": "physics_001",
+        "individual_answers": [
+          "\\[",
+          "$$\\theta_{min} = \\arctan\\left(\\frac{1}{2\\mu}\\right)$$",
+          "Torque about P"
+        ],
+        "majority_answer": "\\[",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_002",
+        "individual_answers": [
+          "** 15 meters",
+          "The two balls meet at a height of **15 meters** above the ground.",
+          "The balls meet at a height of 15 meters."
+        ],
+        "majority_answer": "** 15 meters",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_003",
+        "individual_answers": [
+          "**",
+          "The speed of the free end when the rod becomes vertical is **v = √(3gL)**",
+          "The speed of the free end when the rod becomes vertical is $\\sqrt{3gL}$."
+        ],
+        "majority_answer": "**",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_004",
+        "individual_answers": [
+          "\\(\\boxed{T = 2\\pi \\sqrt{\\frac{2m}{k}}}\\)",
+          "The period of oscillation is **T = 2π√(2m/k)** or equivalently **T = 2√2 π√(m/k)**",
+          "$2\\pi \\sqrt{\\frac{2m}{k}}$"
+        ],
+        "majority_answer": "\\(\\boxed{T = 2\\pi \\sqrt{\\frac{2m}{k}}}\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_005",
+        "individual_answers": [
+          "**",
+          "**t = 1 second**",
+          "If"
+        ],
+        "majority_answer": "**",
+        "correct": false
+      },
+      {
+        "problem_id": "physics_006",
+        "individual_answers": [
+          "\\(\\boxed{70^\\circ C}\\)",
+          "The temperature after another 5 minutes will be approximately **55.7°C** or **56°C** (rounded to nearest degree).",
+          "[Your answer]"
+        ],
+        "majority_answer": "\\(\\boxed{70^\\circ C}\\)",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_001",
+        "individual_answers": [
+          "A is the knight, B is the spy, C is the knave.",
+          "- **A is a knight**",
+          "- If B is a knight ($S_B$), B tells the truth, so $S"
+        ],
+        "majority_answer": "A is the knight, B is the spy, C is the knave.",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_002",
+        "individual_answers": [
+          "The German owns the fish.",
+          "The Norwegian in house 1 owns the fish.**",
+          "The placement of the Norwegian in House 1 and the Blue house in House 2 was from clues 9"
+        ],
+        "majority_answer": "The German owns the fish.",
+        "correct": true
+      },
+      {
+        "problem_id": "logic_003",
+        "individual_answers": [
+          "99",
+          "99",
+          "99"
+        ],
+        "majority_answer": "99",
+        "correct": true
+      },
+      {
+        "problem_id": "logic_004",
+        "individual_answers": [
+          "By dividing the coins into three groups and carefully planning each weighing based on previous results, it is possible to identify the counterfeit coin and whether it is heavier or lighter in exactly 3 weighings. The standard solution involves:",
+          "The solution requires a systematic three-step weighing strategy:",
+          "The solution involves a series of three weighings. Here's a general strategy:"
+        ],
+        "majority_answer": "By dividing the coins into three groups and carefully planning each weighing based on previous results, it is possible to identify the counterfeit coin and whether it is heavier or lighter in exactly 3 weighings. The standard solution involves:",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_005",
+        "individual_answers": [
+          "**A is a knight, B is a knave, C is a knave.**",
+          "- A is a **knight**",
+          "*   So, if A is a knave and B is a knight, A's statement ('B and C are both knaves') is false because B is a knight. This"
+        ],
+        "majority_answer": "**A is a knight, B is a knave, C is a knave.**",
+        "correct": false
+      },
+      {
+        "problem_id": "logic_006",
+        "individual_answers": [
+          "The philosophers deduce their foreheads are all dirty because the initial silence shows nobody saw two clean foreheads, and the collective raising of hands in the third round confirms that each must see at least one dirty forehead, leading to the conclusion that all three are dirty.",
+          "Each philosopher deduces their forehead is dirty through the following logic:",
+          "*   Now, P3's Round 2 deduction in state (D,D,C): P3 sees (D,D). P3 reasons: \"If I were clean (C), the state would be (D,D,C). In this state, P1 sees (D,C) and P2 sees (D,C). Neither of them would know. BUT, if I were clean, consider P1. P1 sees (D,C). If P1 were clean, the state would be (C,"
+        ],
+        "majority_answer": "The philosophers deduce their foreheads are all dirty because the initial silence shows nobody saw two clean foreheads, and the collective raising of hands in the third round confirms that each must see at least one dirty forehead, leading to the conclusion that all three are dirty.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_001",
+        "individual_answers": [
+          "$100",
+          "The optimal bidding strategy is to **bid your true valuation of $100**.",
+          "The optimal bidding strategy in a second-price sealed-bid auction (Vickrey auction) is to bid your true valuation of the item. If your valuation is $100, you should bid $100. This strategy ensures that you win the item if and only if the second-highest bid is less than or equal to your valuation. If you win, you pay the second-highest bid, which is the lowest price that allows you to win, thus maximizing your profit (valuation minus price paid). Bidding more than your valuation risks paying more than the item is worth to you, while bidding less risks losing the item when you could have won it profitably."
+        ],
+        "majority_answer": "$100",
+        "correct": true
+      },
+      {
+        "problem_id": "game_002",
+        "individual_answers": [
+          "The backward induction predicts that the first player will take immediately at the first turn, ending the game with $1, and the second player will receive nothing.",
+          "Backward induction predicts that **all players will pass on every turn, the game will continue until all 6 passes are made, and Player 2 (the second player) will receive the entire pot of $64**. This occurs because at each stage, looking forward, each player can see they will receive more by passing (allowing the pot to grow) than by taking the current pot value.",
+          "Consider the decision at Stage 1 (1 pass completed): Pot ="
+        ],
+        "majority_answer": "The backward induction predicts that the first player will take immediately at the first turn, ending the game with $1, and the second player will receive nothing.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_003",
+        "individual_answers": [
+          "Both companies advertising is the Nash equilibrium.",
+          "The Nash equilibrium is for both companies to advertise, with each earning $3M. This is a dominant strategy equilibrium where advertising is the best response for each company regardless of what the other company does. Although both companies would be better off if neither advertised ($5M each), the individual incentive to advertise (earning $6M if the other doesn't) makes mutual advertising the equilibrium outcome.",
+          "The Nash equilibrium is when both companies advertise."
+        ],
+        "majority_answer": "Both companies advertising is the Nash equilibrium.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_004",
+        "individual_answers": [
+          "The first player is in a winning position. The optimal first move is to reduce the pile of 7 objects to 6 objects by removing 1 object.",
+          "The first player is in a **WINNING POSITION**.",
+          "The first player is in a winning position. The optimal first move is to remove 1 object from the pile of 3, leaving piles of size 2, 5, and 7."
+        ],
+        "majority_answer": "The first player is in a winning position. The optimal first move is to reduce the pile of 7 objects to 6 objects by removing 1 object.",
+        "correct": false
+      },
+      {
+        "problem_id": "game_005",
+        "individual_answers": [
+          "**",
+          "The Nash equilibrium is a **mixed strategy equilibrium** where:",
+          "The Nash equilibrium is for both players to choose Heads with probability 1/2 and Tails with probability 1/2."
+        ],
+        "majority_answer": "**",
+        "correct": false
+      },
+      {
+        "problem_id": "game_006",
+        "individual_answers": [
+          "1",
+          "1",
+          "Player choosing 2: $|2 - 8/9| = |18"
+        ],
+        "majority_answer": "1",
+        "correct": true
+      }
+    ],
+    "voters": [
+      "gpt4",
+      "claude",
+      "gemini"
+    ],
+    "accuracy": 0.32
+  }
+}

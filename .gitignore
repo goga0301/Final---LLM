@@ -144,5 +144,4 @@ cython_debug/
 .pypirc
 
 # Project specific
-results/
 *.log

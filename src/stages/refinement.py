@@ -28,6 +28,10 @@ class Refinement:
 2. Be open to valid corrections but defend sound reasoning
 3. Produce an improved solution incorporating valid feedback
 4. Clearly explain what changes you made and why
+5. CRITICAL: If a CRITICAL error is identified, you MUST fix it
+6. For calculation errors, show the corrected calculation explicitly
+7. If you disagree with a critique, you must provide strong justification
+8. After refinement, verify your answer is correct
 
 Be thorough and maintain intellectual honesty."""
 
@@ -42,6 +46,13 @@ YOUR ORIGINAL SOLUTION:
 PEER REVIEWS:
 {peer_reviews}
 
+CRITICAL REFINEMENT REQUIREMENTS:
+1. If a CRITICAL error is identified, you MUST fix it - do not ignore critical errors
+2. For calculation errors, show the corrected calculation explicitly in your refined_reasoning
+3. If you disagree with a critique, you must provide strong justification explaining why the critique is wrong
+4. After refinement, verify your answer is correct by checking it against the problem constraints
+5. Address the most significant critiques first, especially critical errors
+
 Refine your solution and respond in the following JSON format:
 {{
     "solver_id": "{solver_id}",
@@ -51,25 +62,26 @@ Refine your solution and respond in the following JSON format:
     "critique_responses": [
         {{
             "critique": "The specific critique being addressed",
-            "response": "How you addressed or defended against this critique",
+            "response": "How you addressed or defended against this critique. If accepting, show the corrected calculation or reasoning.",
             "accepted": true or false,
-            "changes_made": "Specific changes if accepted (null if rejected)"
+            "changes_made": "Specific changes if accepted (null if rejected). For calculation errors, include the corrected calculation."
         }}
     ],
     "refined_reasoning": [
         {{
             "step_number": 1,
             "description": "Updated step description",
-            "calculation": "Any calculations (optional)",
+            "calculation": "Any calculations (optional). For corrected calculations, show the full corrected calculation here.",
             "result": "Result (optional)"
         }}
     ],
-    "refined_answer": "Your refined final answer",
+    "refined_answer": "Your refined final answer (if numeric, provide ONLY the number)",
     "confidence": <float between 0 and 1>,
     "answer_changed": true or false
 }}
 
-Address the most significant critiques first. Be honest about whether critiques are valid.
+Address the most significant critiques first, especially critical errors. Be honest about whether critiques are valid.
+After refinement, verify your answer is correct.
 Respond with ONLY the JSON object."""
 
     def __init__(self, clients: Dict[str, BaseLLMClient]):
@@ -124,8 +136,8 @@ Respond with ONLY the JSON object."""
                 prompt=prompt,
                 schema=RefinedSolution,
                 system_prompt=self.REFINEMENT_SYSTEM_PROMPT,
-                temperature=0.5,  # Medium for balanced refinement
-                max_tokens=4096
+                temperature=0.35,  # Lower temperature for more focused corrections
+                max_tokens=8192  # Increased for detailed refinement
             )
             # Ensure IDs are set correctly
             result.solver_id = solver_id

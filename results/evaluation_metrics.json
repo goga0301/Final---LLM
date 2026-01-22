@@ -1,0 +1,71 @@
+{
+  "total_problems": 25,
+  "overall_accuracy": 0.6,
+  "improvement_rate": 0.36,
+  "consensus_rate": 0.68,
+  "judge_accuracy": 0.375,
+  "category_metrics": [
+    {
+      "category": "mathematical_logical",
+      "total_problems": 7,
+      "correct_count": 5,
+      "accuracy": 0.7142857142857143
+    },
+    {
+      "category": "physics_scientific",
+      "total_problems": 6,
+      "correct_count": 4,
+      "accuracy": 0.6666666666666666
+    },
+    {
+      "category": "logic_puzzle",
+      "total_problems": 6,
+      "correct_count": 2,
+      "accuracy": 0.3333333333333333
+    },
+    {
+      "category": "game_theory",
+      "total_problems": 6,
+      "correct_count": 4,
+      "accuracy": 0.6666666666666666
+    }
+  ],
+  "model_performances": [
+    {
+      "model_name": "claude",
+      "times_as_solver": 25,
+      "times_as_judge": 0,
+      "solver_accuracy": 0.44,
+      "solutions_selected_by_judge": 16
+    },
+    {
+      "model_name": "gemini",
+      "times_as_solver": 25,
+      "times_as_judge": 0,
+      "solver_accuracy": 0.4,
+      "solutions_selected_by_judge": 8
+    },
+    {
+      "model_name": "gpt4",
+      "times_as_solver": 25,
+      "times_as_judge": 0,
+      "solver_accuracy": 0.48,
+      "solutions_selected_by_judge": 1
+    },
+    {
+      "model_name": "grok",
+      "times_as_solver": 0,
+      "times_as_judge": 25,
+      "solver_accuracy": 0.0,
+      "solutions_selected_by_judge": 0
+    }
+  ],
+  "single_llm_accuracy": {
+    "gpt4": 0.28,
+    "claude": 0.32,
+    "gemini": 0.12,
+    "grok": 0.36
+  },
+  "voting_baseline_accuracy": 0.32,
+  "system_vs_best_single": 0.24
+}

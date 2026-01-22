@@ -23,10 +23,18 @@ class Judge:
     
     JUDGE_SYSTEM_PROMPT = """You are the final judge in a multi-LLM debate system. Your task is to:
 
-1. Carefully evaluate all three refined solutions
-2. Compare their reasoning quality and correctness
-3. Consider how well each solver addressed peer feedback
-4. Select the best solution with clear justification
+1. FIRST check which answers are CORRECT - this is the most important criterion
+2. If solvers disagree, independently verify the correct answer before selecting winner
+3. Prioritize correctness over eloquence - a correct simple answer beats an elegant wrong answer
+4. If consensus exists (all three agree), verify their answer is correct before selecting
+5. Compare reasoning quality and how well each solver addressed peer feedback
+6. Select the best solution with clear justification
+
+Evaluation Criteria (in priority order):
+1. CORRECTNESS: Is the answer correct? (Most important)
+2. REASONING QUALITY: Is the reasoning sound and complete?
+3. ERROR HANDLING: Did the solver address peer critiques?
+4. CLARITY: Is the solution easy to follow?
 
 Be objective and thorough. The winning answer will be the final output of the system."""
 
@@ -49,6 +57,13 @@ CATEGORY: {category}
 SUMMARY OF PEER REVIEWS:
 {peer_review_summary}
 
+CRITICAL EVALUATION STEPS:
+1. FIRST: Independently verify which answer(s) are CORRECT by checking against the problem
+2. If all three solvers agree (consensus), verify their answer is correct before selecting
+3. If solvers disagree, independently solve or verify the correct answer before selecting winner
+4. Prioritize correctness over reasoning quality - a correct simple answer beats an elegant wrong answer
+5. Only after verifying correctness, evaluate reasoning quality and error handling
+
 Provide your judgment in the following JSON format:
 {{
     "judge_model": "{judge_model}",
@@ -58,32 +73,32 @@ Provide your judgment in the following JSON format:
             "solver_id": "solver_1",
             "strengths": ["Key strengths"],
             "weaknesses": ["Key weaknesses"],
-            "correctness_assessment": "Assessment of whether the answer is correct",
-            "quality_score": <float between 0 and 1>
+            "correctness_assessment": "Explicit assessment: 'CORRECT' or 'INCORRECT' with brief reason",
+            "quality_score": <float between 0 and 1, with 0.8+ only for correct answers>
         }},
         {{
             "solver_id": "solver_2",
             "strengths": ["Key strengths"],
             "weaknesses": ["Key weaknesses"],
-            "correctness_assessment": "Assessment",
-            "quality_score": <float between 0 and 1>
+            "correctness_assessment": "Explicit assessment: 'CORRECT' or 'INCORRECT' with brief reason",
+            "quality_score": <float between 0 and 1, with 0.8+ only for correct answers>
         }},
         {{
             "solver_id": "solver_3",
             "strengths": ["Key strengths"],
             "weaknesses": ["Key weaknesses"],
-            "correctness_assessment": "Assessment",
-            "quality_score": <float between 0 and 1>
+            "correctness_assessment": "Explicit assessment: 'CORRECT' or 'INCORRECT' with brief reason",
+            "quality_score": <float between 0 and 1, with 0.8+ only for correct answers>
         }}
     ],
     "winner": "solver_1|solver_2|solver_3",
-    "winning_answer": "The exact answer from the winning solution",
+    "winning_answer": "The exact answer from the winning solution (if numeric, provide ONLY the number)",
     "confidence": <float between 0 and 1>,
-    "reasoning": "Detailed explanation of why this solution was selected",
+    "reasoning": "Detailed explanation of why this solution was selected. Must explain how you verified correctness.",
     "consensus_exists": true or false (whether all solvers agreed on the answer)
 }}
 
-Evaluate carefully and select the best answer.
+Evaluate carefully. Verify correctness FIRST, then select the best answer.
 Respond with ONLY the JSON object."""
 
     def __init__(self, clients: Dict[str, BaseLLMClient]):
@@ -187,7 +202,7 @@ Respond with ONLY the JSON object."""
                 schema=JudgmentResult,
                 system_prompt=self.JUDGE_SYSTEM_PROMPT,
                 temperature=0.3,  # Low for deterministic judgment
-                max_tokens=4096
+                max_tokens=8192  # Increased for detailed evaluation
             )
             # Ensure values are set correctly
             result.judge_model = assignment.judge

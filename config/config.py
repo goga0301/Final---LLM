@@ -19,7 +19,7 @@ class ModelConfig:
     api_key: Optional[str]
     model_id: str
     max_tokens: int = 4096
-    temperature: float = 1
+    temperature: float = 0.5
 
 
 @dataclass
@@ -45,40 +45,40 @@ class SystemConfig:
 OPENAI_CONFIG = ModelConfig(
     name="GPT",
     api_key=os.getenv("OPENAI_API_KEY"),
-    model_id="gpt-5.1-2025-11-13",
+    model_id="gpt-4.1-nano-2025-04-14",
     max_tokens=4096,
-    temperature=1
+    temperature=0.5
 )
 
 ANTHROPIC_CONFIG = ModelConfig(
     name="Claude",
     api_key=os.getenv("ANTHROPIC_API_KEY"),
-    model_id="claude-3-haiku-20240307",
+    model_id="claude-haiku-4-5-20251001",
     max_tokens=4096,
-    temperature=1
+    temperature=0.5
 )
 
 GOOGLE_CONFIG = ModelConfig(
     name="Gemini",
     api_key=os.getenv("GOOGLE_API_KEY"),
-    model_id="gemini-3-flash-preview",
+    model_id="gemini-2.5-flash-lite",
     max_tokens=4096,
-    temperature=1
+    temperature=0.5
 )
 
 XAI_CONFIG = ModelConfig(
     name="Grok",
     api_key=os.getenv("XAI_API_KEY"),
-    model_id="grok-3-mini",
+    model_id="grok-4-1-fast-reasoning",
     max_tokens=4096,
-    temperature=1
+    temperature=0.5
 )
 
 # System configuration
 SYSTEM_CONFIG = SystemConfig(
     api_timeout=120,
     max_retries=3,
-    retry_delay=1.0,
+    retry_delay=3.0,
     debug=os.getenv("DEBUG", "false").lower() == "true",
     results_dir="results"
 )

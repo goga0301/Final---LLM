@@ -25,6 +25,9 @@ Guidelines:
 3. Consider edge cases and verify your reasoning
 4. State any assumptions you make
 5. Provide a clear final answer with confidence level
+6. CRITICALLY IMPORTANT: Double-check all calculations, especially arithmetic operations
+7. VERIFY your final answer by checking it against the problem constraints
+8. If the answer is a number, provide ONLY the number without extra text (e.g., "10" not "10 players participated")
 
 Your solution will be reviewed by other LLMs, so be thorough and precise."""
 
@@ -34,6 +37,8 @@ PROBLEM:
 {problem_text}
 
 CATEGORY: {category}
+
+{category_instructions}
 
 Provide your solution in the following JSON format:
 {{
@@ -48,11 +53,20 @@ Provide your solution in the following JSON format:
             "result": "Result of this step (optional)"
         }}
     ],
-    "final_answer": "Your final answer",
+    "final_answer": "Your final answer (if numeric, provide ONLY the number without extra text)",
     "confidence": <float between 0 and 1>,
     "assumptions": ["List of assumptions made (optional)"],
     "alternative_approaches": ["Other approaches considered (optional)"]
 }}
+
+CRITICAL REQUIREMENTS:
+1. Double-check all calculations step-by-step, especially arithmetic operations
+2. VERIFY your final answer by checking it against the problem constraints
+3. If the answer is a number, provide ONLY the number (e.g., "10" not "10 players")
+4. For physics problems: Show all unit conversions and verify dimensional consistency
+5. For game theory: Explicitly state all assumptions about player rationality
+6. For math problems: Verify your answer by plugging it back into the original equation
+7. For logic puzzles: Show all constraint satisfactions step-by-step
 
 Be thorough in your reasoning. Show your work clearly.
 Respond with ONLY the JSON object."""
@@ -65,6 +79,16 @@ Respond with ONLY the JSON object."""
             clients: Dictionary mapping model names to their clients
         """
         self.clients = clients
+    
+    def _get_category_instructions(self, category: str) -> str:
+        """Get category-specific instructions."""
+        instructions = {
+            "mathematical_logical": "IMPORTANT: Verify your answer by plugging it back into the original equation or formula.",
+            "physics_scientific": "IMPORTANT: Show all formulas, unit conversions, and verify dimensional consistency. Check that units match on both sides of equations.",
+            "game_theory": "IMPORTANT: Explicitly state Nash equilibrium conditions and verify them. Clearly state all assumptions about player rationality and information.",
+            "logic_puzzle": "IMPORTANT: Show all constraint satisfactions step-by-step. Verify that your solution satisfies all given constraints."
+        }
+        return instructions.get(category, "")
     
     async def generate_solution(
         self,
@@ -85,9 +109,11 @@ Respond with ONLY the JSON object."""
         Returns:
             Solution with reasoning and answer
         """
+        category_instructions = self._get_category_instructions(problem.category.value)
         prompt = self.SOLVER_PROMPT_TEMPLATE.format(
             problem_text=problem.problem_text,
             category=problem.category.value,
+            category_instructions=category_instructions,
             solver_id=solver_id,
             model_name=model_name,
             problem_id=problem.id
@@ -98,8 +124,8 @@ Respond with ONLY the JSON object."""
                 prompt=prompt,
                 schema=Solution,
                 system_prompt=self.SOLVER_SYSTEM_PROMPT,
-                temperature=0.7,  # Medium-high for creative problem solving
-                max_tokens=4096
+                temperature=0.35,  # Lower temperature for more deterministic math solutions
+                max_tokens=8192  # Increased for complex problems
             )
             # Ensure IDs are set correctly
             result.solver_id = solver_id

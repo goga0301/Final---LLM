@@ -254,21 +254,57 @@ class DebateOrchestrator:
     
     def _normalize_answer(self, answer: str) -> str:
         """Normalize an answer for comparison."""
+        import re
+        
         # Convert to lowercase and strip
         normalized = answer.lower().strip()
         
+        # Handle LaTeX formatting: remove LaTeX delimiters and commands
+        # Remove \(, \), \[, \], $, $$
+        normalized = re.sub(r'\\(?:\(|\)|\[|\])', '', normalized)
+        normalized = re.sub(r'\$\$?', '', normalized)
+        # Remove LaTeX commands like \frac, \displaystyle, etc.
+        normalized = re.sub(r'\\[a-z]+\{([^}]+)\}', r'\1', normalized)  # \frac{1}{8} -> 1}{8
+        normalized = re.sub(r'\\[a-z]+', '', normalized)  # Remove remaining LaTeX commands
+        # Clean up braces and extra formatting
+        normalized = re.sub(r'\{([^}]+)\}', r'\1', normalized)  # {content} -> content
+        
         # Remove common prefixes
-        prefixes = ["the answer is", "answer:", "final answer:", "="]
+        prefixes = ["the answer is", "answer:", "final answer:", "=", "therefore", "thus"]
         for prefix in prefixes:
             if normalized.startswith(prefix):
                 normalized = normalized[len(prefix):].strip()
         
-        # Remove units and extra text after numbers
-        import re
-        # Try to extract main numeric value or key term
-        numeric_match = re.search(r'^[\d.,/]+', normalized)
-        if numeric_match:
-            normalized = numeric_match.group()
+        # Extract numbers from text (e.g., "15 players" -> "15")
+        # First try to find a standalone number
+        number_patterns = [
+            r'^(\d+(?:\.\d+)?)',  # Leading number
+            r'(\d+(?:\.\d+)?)\s*(?:players?|meters?|seconds?|degrees?|°|m|s|kg|etc\.)',  # Number with common units
+            r'(\d+(?:\.\d+)?)',  # Any number
+        ]
+        
+        for pattern in number_patterns:
+            match = re.search(pattern, normalized)
+            if match:
+                normalized = match.group(1)
+                break
+        
+        # Handle fractions: convert \frac{a}{b} or a/b to decimal or keep as fraction
+        # If we have a fraction format, try to normalize it
+        fraction_match = re.search(r'(\d+)\s*/\s*(\d+)', normalized)
+        if fraction_match:
+            # Keep fraction format for comparison (will be handled in _check_answer)
+            normalized = f"{fraction_match.group(1)}/{fraction_match.group(2)}"
+        
+        # Remove extra whitespace and clean up
+        normalized = re.sub(r'\s+', ' ', normalized).strip()
+        
+        # If still contains text, try to extract just the numeric part
+        if not re.match(r'^[\d.,/\-]+$', normalized):
+            # Try to find the first number in the string
+            numeric_match = re.search(r'(\d+(?:\.\d+)?(?:/\d+)?)', normalized)
+            if numeric_match:
+                normalized = numeric_match.group(1)
         
         return normalized
     
